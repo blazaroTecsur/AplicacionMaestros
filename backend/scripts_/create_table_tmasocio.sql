@@ -1,5 +1,5 @@
 -- ── Tabla maestro de socios ─────────────────────────────
-CREATE TABLE IF NOT EXISTS tmasocios (
+CREATE TABLE IF NOT EXISTS tmasocio (
     id_socio                BIGINT          NOT NULL AUTO_INCREMENT,
     id_socio_external       BIGINT          NOT NULL,
 
@@ -27,10 +27,10 @@ CREATE TABLE IF NOT EXISTS tmasocios (
 
     PRIMARY KEY (id_socio),
 
-    UNIQUE INDEX idx_tmasocios_id_socio_external (id_socio_external),
-    UNIQUE INDEX idx_tmasocios_codigo_socio      (codigo_socio),
-    INDEX        idx_tmasocios_tipo_empleado     (tipo_empleado),
-    INDEX        idx_tmasocios_activo            (activo),
-    INDEX        idx_tmasocios_departamento      (departamento),
-    INDEX        idx_tmasocios_supervisor        (supervisor)
+    UNIQUE INDEX idx_tmasocio_id_socio_external (id_socio_external),
+    UNIQUE INDEX idx_tmasocio_codigo_socio      (codigo_socio),
+    INDEX        idx_tmasocio_tipo_empleado     (tipo_empleado),
+    INDEX        idx_tmasocio_activo            (activo),
+    INDEX        idx_tmasocio_departamento      (departamento),
+    INDEX        idx_tmasocio_supervisor        (supervisor)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

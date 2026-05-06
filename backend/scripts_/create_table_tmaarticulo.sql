@@ -1,5 +1,5 @@
 -- ── Tabla maestro de articulos ─────────────────────────────
-CREATE TABLE IF NOT EXISTS tmaarticulos (
+CREATE TABLE IF NOT EXISTS tmaarticulo (
     id_articulo             BIGINT          NOT NULL AUTO_INCREMENT,
     id_articulo_external    BIGINT          NOT NULL,
 
@@ -22,10 +22,10 @@ CREATE TABLE IF NOT EXISTS tmaarticulos (
 
     PRIMARY KEY (id_articulo),
 
-    UNIQUE INDEX idx_tmaarticulos_id_articulo_external (id_articulo_external),
-    UNIQUE INDEX idx_tmaarticulos_codigo               (codigo),
-    INDEX        idx_tmaarticulos_tipo                 (tipo),
-    INDEX        idx_tmaarticulos_origen               (origen),
-    INDEX        idx_tmaarticulos_codigo_producto      (codigo_producto),
-    INDEX        idx_tmaarticulos_estado_material      (estado_material)
+    UNIQUE INDEX idx_tmaarticulo_id_articulo_external (id_articulo_external),
+    UNIQUE INDEX idx_tmaarticulo_codigo               (codigo),
+    INDEX        idx_tmaarticulo_tipo                 (tipo),
+    INDEX        idx_tmaarticulo_origen               (origen),
+    INDEX        idx_tmaarticulo_codigo_producto      (codigo_producto),
+    INDEX        idx_tmaarticulo_estado_material      (estado_material)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

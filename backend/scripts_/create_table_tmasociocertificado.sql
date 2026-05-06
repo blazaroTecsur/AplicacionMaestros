@@ -1,5 +1,5 @@
 -- ── Tabla relacion socio-certificacion ─────────────────────────────
-CREATE TABLE IF NOT EXISTS tmasociocertificados (
+CREATE TABLE IF NOT EXISTS tmasociocertificado (
     id_socio            BIGINT      NOT NULL,
     id_certificacion    BIGINT      NOT NULL,
 
@@ -10,15 +10,15 @@ CREATE TABLE IF NOT EXISTS tmasociocertificados (
 
     PRIMARY KEY (id_socio, id_certificacion),
 
-    INDEX idx_tmasociocertificados_id_certificacion (id_certificacion),
+    INDEX idx_tmasociocertificado_id_certificacion (id_certificacion),
 
-    CONSTRAINT fk_tmasociocertificados_tmasocios
+    CONSTRAINT fk_tmasociocertificado_tmasocio
         FOREIGN KEY (id_socio)
-        REFERENCES tmasocios (id_socio)
+        REFERENCES tmasocio (id_socio)
         ON DELETE CASCADE,
 
-    CONSTRAINT fk_tmasociocertificados_tmacertificaciones
+    CONSTRAINT fk_tmasociocertificado_tmacertificacion
         FOREIGN KEY (id_certificacion)
-        REFERENCES tmacertificaciones (id_certificacion)
+        REFERENCES tmacertificacion (id_certificacion)
         ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -1,5 +1,5 @@
 -- ── Tabla relacion socio-aptitud ─────────────────────────────
-CREATE TABLE IF NOT EXISTS tmasocioaptitudes (
+CREATE TABLE IF NOT EXISTS tmasocioaptitud (
     id_socio        BIGINT      NOT NULL,
     id_aptitud      BIGINT      NOT NULL,
 
@@ -10,15 +10,15 @@ CREATE TABLE IF NOT EXISTS tmasocioaptitudes (
 
     PRIMARY KEY (id_socio, id_aptitud),
 
-    INDEX idx_tmasocioaptitudes_id_aptitud (id_aptitud),
+    INDEX idx_tmasocioaptitud_id_aptitud (id_aptitud),
 
-    CONSTRAINT fk_tmasocioaptitudes_tmasocios
+    CONSTRAINT fk_tmasocioaptitud_tmasocio
         FOREIGN KEY (id_socio)
-        REFERENCES tmasocios (id_socio)
+        REFERENCES tmasocio (id_socio)
         ON DELETE CASCADE,
 
-    CONSTRAINT fk_tmasocioaptitudes_tmaaptitudes
+    CONSTRAINT fk_tmasocioaptitud_tmaaptitud
         FOREIGN KEY (id_aptitud)
-        REFERENCES tmaaptitudes (id_aptitud)
+        REFERENCES tmaaptitud (id_aptitud)
         ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -1,5 +1,5 @@
 -- ── Tabla maestro de proveedores ─────────────────────────────
-CREATE TABLE IF NOT EXISTS tmaproveedores (
+CREATE TABLE IF NOT EXISTS tmaproveedor (
     id_proveedor                BIGINT          NOT NULL AUTO_INCREMENT,
     id_proveedor_external       BIGINT          NOT NULL,
     nombre_proveedor            VARCHAR(255)    NOT NULL,
@@ -27,13 +27,13 @@ CREATE TABLE IF NOT EXISTS tmaproveedores (
 
     PRIMARY KEY (id_proveedor),
 
-    UNIQUE INDEX idx_tmaproveedores_id_proveedor_external (id_proveedor_external),
-    UNIQUE INDEX idx_tmaproveedores_ruc                   (ruc),
-    INDEX        idx_tmaproveedores_nombre_proveedor      (nombre_proveedor(100))
+    UNIQUE INDEX idx_tmaproveedor_id_proveedor_external (id_proveedor_external),
+    UNIQUE INDEX idx_tmaproveedor_ruc                   (ruc),
+    INDEX        idx_tmaproveedor_nombre_proveedor      (nombre_proveedor(100))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ── Datos de prueba ────────────────────────────────────────
-INSERT INTO tmaproveedores
+INSERT INTO tmaproveedor
 (
     id_proveedor_external,
     nombre_proveedor,

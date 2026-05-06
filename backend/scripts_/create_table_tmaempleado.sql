@@ -1,5 +1,5 @@
 -- ── Tabla maestro de empleados ─────────────────────────────
-CREATE TABLE IF NOT EXISTS tmaempleados (
+CREATE TABLE IF NOT EXISTS tmaempleado (
     id_empleado             BIGINT          NOT NULL AUTO_INCREMENT,
 
     id_empleado_external    VARCHAR(20)     NOT NULL,
@@ -54,11 +54,11 @@ CREATE TABLE IF NOT EXISTS tmaempleados (
 
     PRIMARY KEY (id_empleado),
 
-    UNIQUE INDEX idx_tmaempleados_id_empleado_external (id_empleado_external)
+    UNIQUE INDEX idx_tmaempleado_id_empleado_external (id_empleado_external)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ── Datos de prueba ────────────────────────────────────────
-INSERT INTO tmaempleados
+INSERT INTO tmaempleado
     (id_empleado_external, codigo, nombre_completo,
      primer_nombre, segundo_nombre, primer_apellido, segundo_apellido,
      apellido, nombre, cargo, dpto, estado,
