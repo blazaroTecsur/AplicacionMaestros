@@ -1,31 +1,31 @@
 -- ── Tabla maestro de articulos ─────────────────────────────
 CREATE TABLE IF NOT EXISTS tmaarticulo (
-    id_articulo             BIGINT          NOT NULL AUTO_INCREMENT,
-    id_articulo_external    BIGINT          NOT NULL,
+    IdArticulo              BIGINT          NOT NULL AUTO_INCREMENT,
+    IdArticuloExternal      BIGINT          NOT NULL,
 
-    codigo                  VARCHAR(15)     NOT NULL,
-    descripcion             VARCHAR(500)    NOT NULL,
-    unidad_medida           VARCHAR(10)     NULL,
-    tipo                    VARCHAR(20)     NULL,
-    origen                  VARCHAR(50)     NULL,
-    codigo_producto         VARCHAR(50)     NULL,
-    codigo_abc              VARCHAR(2)      NULL,
+    Codigo                  VARCHAR(15)     NOT NULL,
+    Descripcion             VARCHAR(500)    NOT NULL,
+    UnidadMedida            VARCHAR(10)     NULL,
+    Tipo                    VARCHAR(20)     NULL,
+    Origen                  VARCHAR(50)     NULL,
+    CodigoProducto          VARCHAR(50)     NULL,
+    CodigoAbc               VARCHAR(2)      NULL,
 
-    seg_lote                TINYINT(1)      NOT NULL DEFAULT 0,
+    SegLote                 TINYINT(1)      NOT NULL DEFAULT 0,
 
-    estado_material         VARCHAR(20)     NOT NULL DEFAULT 'ACTIVO',
+    EstadoMaterial          VARCHAR(20)     NOT NULL DEFAULT 'ACTIVO',
 
-    usuario_reg             VARCHAR(100)    NULL,
-    fecha_reg               DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    usuario_act             VARCHAR(100)    NULL,
-    fecha_act               DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
+    UsuarioReg              VARCHAR(100)    NULL,
+    FechaReg                DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UsuarioAct              VARCHAR(100)    NULL,
+    FechaAct                DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
 
-    PRIMARY KEY (id_articulo),
+    PRIMARY KEY (IdArticulo),
 
-    UNIQUE INDEX idx_tmaarticulo_id_articulo_external (id_articulo_external),
-    UNIQUE INDEX idx_tmaarticulo_codigo               (codigo),
-    INDEX        idx_tmaarticulo_tipo                 (tipo),
-    INDEX        idx_tmaarticulo_origen               (origen),
-    INDEX        idx_tmaarticulo_codigo_producto      (codigo_producto),
-    INDEX        idx_tmaarticulo_estado_material      (estado_material)
+    UNIQUE INDEX idx_tmaarticulo_IdArticuloExternal (IdArticuloExternal),
+    UNIQUE INDEX idx_tmaarticulo_Codigo             (Codigo),
+    INDEX        idx_tmaarticulo_Tipo               (Tipo),
+    INDEX        idx_tmaarticulo_Origen             (Origen),
+    INDEX        idx_tmaarticulo_CodigoProducto     (CodigoProducto),
+    INDEX        idx_tmaarticulo_EstadoMaterial     (EstadoMaterial)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

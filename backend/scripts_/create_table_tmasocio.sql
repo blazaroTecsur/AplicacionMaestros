@@ -1,36 +1,36 @@
 -- ── Tabla maestro de socios ─────────────────────────────
 CREATE TABLE IF NOT EXISTS tmasocio (
-    id_socio                BIGINT          NOT NULL AUTO_INCREMENT,
-    id_socio_external       BIGINT          NOT NULL,
+    IdSocio                 BIGINT          NOT NULL AUTO_INCREMENT,
+    IdSocioExternal         BIGINT          NOT NULL,
 
-    codigo_socio            VARCHAR(50)     NOT NULL,
-    tipo_empleado           VARCHAR(50)     NOT NULL,
-    nro_referencia          VARCHAR(50)     NOT NULL DEFAULT '',
-    nombre_completo         VARCHAR(255)    NOT NULL,
-    supervisor              VARCHAR(100)    NULL,
-    cod_trabajo             VARCHAR(20)     NULL,
-    tipo_pago               VARCHAR(20)     NULL,
+    CodigoSocio             VARCHAR(50)     NOT NULL,
+    TipoEmpleado            VARCHAR(50)     NOT NULL,
+    NroReferencia           VARCHAR(50)     NOT NULL DEFAULT '',
+    NombreCompleto          VARCHAR(255)    NOT NULL,
+    Supervisor              VARCHAR(100)    NULL,
+    CodTrabajo              VARCHAR(20)     NULL,
+    TipoPago                VARCHAR(20)     NULL,
 
-    activo                  TINYINT(1)      NOT NULL DEFAULT 1,
+    Activo                  TINYINT(1)      NOT NULL DEFAULT 1,
 
-    email                   VARCHAR(150)    NULL,
-    direccion_localiz       VARCHAR(255)    NULL,
-    direccion_mensaje       VARCHAR(255)    NULL,
-    almacen                 VARCHAR(100)    NULL,
-    departamento            VARCHAR(100)    NULL,
-    usuario                 VARCHAR(150)    NULL,
+    Email                   VARCHAR(150)    NULL,
+    DireccionLocaliz        VARCHAR(255)    NULL,
+    DireccionMensaje        VARCHAR(255)    NULL,
+    Almacen                 VARCHAR(100)    NULL,
+    Departamento            VARCHAR(100)    NULL,
+    Usuario                 VARCHAR(150)    NULL,
 
-    usuario_reg             VARCHAR(100)    NULL,
-    fecha_reg               DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    usuario_act             VARCHAR(100)    NULL,
-    fecha_act               DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
+    UsuarioReg              VARCHAR(100)    NULL,
+    FechaReg                DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UsuarioAct              VARCHAR(100)    NULL,
+    FechaAct                DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
 
-    PRIMARY KEY (id_socio),
+    PRIMARY KEY (IdSocio),
 
-    UNIQUE INDEX idx_tmasocio_id_socio_external (id_socio_external),
-    UNIQUE INDEX idx_tmasocio_codigo_socio      (codigo_socio),
-    INDEX        idx_tmasocio_tipo_empleado     (tipo_empleado),
-    INDEX        idx_tmasocio_activo            (activo),
-    INDEX        idx_tmasocio_departamento      (departamento),
-    INDEX        idx_tmasocio_supervisor        (supervisor)
+    UNIQUE INDEX idx_tmasocio_IdSocioExternal (IdSocioExternal),
+    UNIQUE INDEX idx_tmasocio_CodigoSocio     (CodigoSocio),
+    INDEX        idx_tmasocio_TipoEmpleado    (TipoEmpleado),
+    INDEX        idx_tmasocio_Activo          (Activo),
+    INDEX        idx_tmasocio_Departamento    (Departamento),
+    INDEX        idx_tmasocio_Supervisor      (Supervisor)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

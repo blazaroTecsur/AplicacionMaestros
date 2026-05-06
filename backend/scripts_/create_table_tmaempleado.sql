@@ -1,68 +1,68 @@
 -- ── Tabla maestro de empleados ─────────────────────────────
 CREATE TABLE IF NOT EXISTS tmaempleado (
-    id_empleado             BIGINT          NOT NULL AUTO_INCREMENT,
+    IdEmpleado              BIGINT          NOT NULL AUTO_INCREMENT,
 
-    id_empleado_external    VARCHAR(20)     NOT NULL,
-    codigo                  VARCHAR(20)     NOT NULL,
-    nombre_completo         VARCHAR(200)    NOT NULL,
+    IdEmpleadoExternal      VARCHAR(20)     NOT NULL,
+    Codigo                  VARCHAR(20)     NOT NULL,
+    NombreCompleto          VARCHAR(200)    NOT NULL,
 
     -- datos principales
-    apellido                VARCHAR(150)    NULL,
-    nombre                  VARCHAR(150)    NULL,
-    alias                   VARCHAR(150)    NULL,
-    cargo                   VARCHAR(150)    NULL,
-    dpto                    VARCHAR(100)    NULL,
-    estado                  VARCHAR(20)     NULL,
-    turno                   VARCHAR(20)     NULL,
-    categoria               VARCHAR(20)     NULL,
-    id_usuario              VARCHAR(50)     NULL,
-    frec_pago               VARCHAR(20)     NULL,
-    tip_emp                 VARCHAR(50)     NULL,
-    gen_nomina              VARCHAR(50)     NULL,
-    cta_sueldo              VARCHAR(50)     NULL,
+    Apellido                VARCHAR(150)    NULL,
+    Nombre                  VARCHAR(150)    NULL,
+    Alias                   VARCHAR(150)    NULL,
+    Cargo                   VARCHAR(150)    NULL,
+    Dpto                    VARCHAR(100)    NULL,
+    Estado                  VARCHAR(20)     NULL,
+    Turno                   VARCHAR(20)     NULL,
+    Categoria               VARCHAR(20)     NULL,
+    IdUsuario               VARCHAR(50)     NULL,
+    FrecPago                VARCHAR(20)     NULL,
+    TipEmp                  VARCHAR(50)     NULL,
+    GenNomina               VARCHAR(50)     NULL,
+    CtaSueldo               VARCHAR(50)     NULL,
 
     -- nombre fiscal
-    primer_nombre           VARCHAR(100)    NULL,
-    segundo_nombre          VARCHAR(100)    NULL,
-    primer_apellido         VARCHAR(100)    NULL,
-    segundo_apellido        VARCHAR(100)    NULL,
+    PrimerNombre            VARCHAR(100)    NULL,
+    SegundoNombre           VARCHAR(100)    NULL,
+    PrimerApellido          VARCHAR(100)    NULL,
+    SegundoApellido         VARCHAR(100)    NULL,
 
     -- contacto
-    direccion1              VARCHAR(200)    NULL,
-    direccion2              VARCHAR(200)    NULL,
-    direccion3              VARCHAR(200)    NULL,
-    direccion4              VARCHAR(200)    NULL,
-    ciudad                  VARCHAR(100)    NULL,
-    cod_provincia           VARCHAR(10)     NULL,
-    cp                      VARCHAR(20)     NULL,
-    municipio               VARCHAR(100)    NULL,
-    telefono                VARCHAR(50)     NULL,
-    tel_comercial           VARCHAR(50)     NULL,
-    extension_tel           VARCHAR(20)     NULL,
-    correo_elect            VARCHAR(200)    NULL,
-    correo                  VARCHAR(200)    NULL,
+    Direccion1              VARCHAR(200)    NULL,
+    Direccion2              VARCHAR(200)    NULL,
+    Direccion3              VARCHAR(200)    NULL,
+    Direccion4              VARCHAR(200)    NULL,
+    Ciudad                  VARCHAR(100)    NULL,
+    CodProvincia            VARCHAR(10)     NULL,
+    Cp                      VARCHAR(20)     NULL,
+    Municipio               VARCHAR(100)    NULL,
+    Telefono                VARCHAR(50)     NULL,
+    TelComercial            VARCHAR(50)     NULL,
+    ExtensionTel            VARCHAR(20)     NULL,
+    CorreoElect             VARCHAR(200)    NULL,
+    Correo                  VARCHAR(200)    NULL,
 
     -- recursos humanos
-    fecha_contr             DATETIME        NULL,
-    fecha_revis             DATETIME        NULL,
-    fecha_rescis            DATETIME        NULL,
+    FechaContr              DATETIME        NULL,
+    FechaRevis              DATETIME        NULL,
+    FechaRescis             DATETIME        NULL,
 
-    usuario_reg             VARCHAR(100)    NULL,
-    fecha_reg               DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    usuario_act             VARCHAR(100)    NULL,
-    fecha_act               DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
+    UsuarioReg              VARCHAR(100)    NULL,
+    FechaReg                DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UsuarioAct              VARCHAR(100)    NULL,
+    FechaAct                DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
 
-    PRIMARY KEY (id_empleado),
+    PRIMARY KEY (IdEmpleado),
 
-    UNIQUE INDEX idx_tmaempleado_id_empleado_external (id_empleado_external)
+    UNIQUE INDEX idx_tmaempleado_IdEmpleadoExternal (IdEmpleadoExternal)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ── Datos de prueba ────────────────────────────────────────
 INSERT INTO tmaempleado
-    (id_empleado_external, codigo, nombre_completo,
-     primer_nombre, segundo_nombre, primer_apellido, segundo_apellido,
-     apellido, nombre, cargo, dpto, estado,
-     tip_emp, fecha_contr)
+    (IdEmpleadoExternal, Codigo, NombreCompleto,
+     PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido,
+     Apellido, Nombre, Cargo, Dpto, Estado,
+     TipEmp, FechaContr)
 VALUES
     ('EMP-001', 'E001', 'GARCIA LOPEZ JUAN CARLOS',
      'JUAN', 'CARLOS', 'GARCIA', 'LOPEZ',

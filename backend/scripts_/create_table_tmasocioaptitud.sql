@@ -1,24 +1,24 @@
 -- ── Tabla relacion socio-aptitud ─────────────────────────────
 CREATE TABLE IF NOT EXISTS tmasocioaptitud (
-    id_socio        BIGINT      NOT NULL,
-    id_aptitud      BIGINT      NOT NULL,
+    IdSocio         BIGINT      NOT NULL,
+    IdAptitud       BIGINT      NOT NULL,
 
-    usuario_reg     VARCHAR(100)    NULL,
-    fecha_reg       DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    usuario_act     VARCHAR(100)    NULL,
-    fecha_act       DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
+    UsuarioReg      VARCHAR(100)    NULL,
+    FechaReg        DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UsuarioAct      VARCHAR(100)    NULL,
+    FechaAct        DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
 
-    PRIMARY KEY (id_socio, id_aptitud),
+    PRIMARY KEY (IdSocio, IdAptitud),
 
-    INDEX idx_tmasocioaptitud_id_aptitud (id_aptitud),
+    INDEX idx_tmasocioaptitud_IdAptitud (IdAptitud),
 
     CONSTRAINT fk_tmasocioaptitud_tmasocio
-        FOREIGN KEY (id_socio)
-        REFERENCES tmasocio (id_socio)
+        FOREIGN KEY (IdSocio)
+        REFERENCES tmasocio (IdSocio)
         ON DELETE CASCADE,
 
     CONSTRAINT fk_tmasocioaptitud_tmaaptitud
-        FOREIGN KEY (id_aptitud)
-        REFERENCES tmaaptitud (id_aptitud)
+        FOREIGN KEY (IdAptitud)
+        REFERENCES tmaaptitud (IdAptitud)
         ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
