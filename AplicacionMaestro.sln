@@ -1,8 +1,26 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resource", "resource", "{A0000001-0000-0000-0000-000000000001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A0000002-0000-0000-0000-000000000002}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacion", "Aplicacion", "{A0000003-0000-0000-0000-000000000003}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{A0000004-0000-0000-0000-000000000004}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructura", "Infraestructura", "{A0000005-0000-0000-0000-000000000005}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentacion", "Presentacion", "{A0000006-0000-0000-0000-000000000006}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A0000007-0000-0000-0000-000000000007}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PruebaUnitaria", "PruebaUnitaria", "{A0000008-0000-0000-0000-000000000008}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PruebaIntegral", "PruebaIntegral", "{A0000009-0000-0000-0000-000000000009}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Application", "src\Aplicacion\AplicacionMaestro.Application\AplicacionMaestro.Application.csproj", "{22D1DE6D-0CC1-4A37-A79A-B3DCE3AC997D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Domain", "src\Dominio\AplicacionMaestro.Domain\AplicacionMaestro.Domain.csproj", "{DA309A94-0E51-4410-B1A7-228A4111155A}"
@@ -19,8 +37,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Worker.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Worker.Certificados", "src\Presentacion\AplicacionMaestro.Worker.Certificados\AplicacionMaestro.Worker.Certificados.csproj", "{D51959A9-1F65-4805-8FDD-D6E9F04F3C11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Worker.UnitTest", "test\PruebaUnitaria\AplicacionMaestro.Worker.UnitTest\AplicacionMaestro.Worker.UnitTest.csproj", "{D92FE589-9F1C-47B5-82CF-2577BC779257}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Worker.Almacenes", "src\Presentacion\AplicacionMaestro.Worker.Almacenes\AplicacionMaestro.Worker.Almacenes.csproj", "{3E6EBF4B-8F78-4D0B-8B16-E7560E1B8B0F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Worker.CodsUnidad1", "src\Presentacion\AplicacionMaestro.Worker.CodsUnidad1\AplicacionMaestro.Worker.CodsUnidad1.csproj", "{23D93A78-7001-4FCD-BE6A-FBF47AAF3A4A}"
@@ -28,6 +44,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Worker.Empleados", "src\Presentacion\AplicacionMaestro.Worker.Empleados\AplicacionMaestro.Worker.Empleados.csproj", "{094253FB-C11A-48EA-8406-D2D2629696C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Worker.CuentasContables", "src\Presentacion\AplicacionMaestro.Worker.CuentasContables\AplicacionMaestro.Worker.CuentasContables.csproj", "{3970CE9D-56F8-40A2-BEAB-09DBCDE0020D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionMaestro.Worker.UnitTest", "test\PruebaUnitaria\AplicacionMaestro.Worker.UnitTest\AplicacionMaestro.Worker.UnitTest.csproj", "{D92FE589-9F1C-47B5-82CF-2577BC779257}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -199,7 +217,35 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
+	GlobalSection(NestedProjects) = preSolution
+		; Proyectos dentro de src/Aplicacion
+		{22D1DE6D-0CC1-4A37-A79A-B3DCE3AC997D} = {A0000003-0000-0000-0000-000000000003}
+		; Proyectos dentro de src/Dominio
+		{DA309A94-0E51-4410-B1A7-228A4111155A} = {A0000004-0000-0000-0000-000000000004}
+		; Proyectos dentro de src/Infraestructura
+		{C113F53B-DAA3-4CA8-91D4-9C77C90194E7} = {A0000005-0000-0000-0000-000000000005}
+		; Proyectos dentro de src/Presentacion
+		{15F0DD14-2F07-4ECF-9F48-F28BE715FA9D} = {A0000006-0000-0000-0000-000000000006}
+		{5792952A-4105-4487-9CC3-F08D58407937} = {A0000006-0000-0000-0000-000000000006}
+		{20C8D0D0-82FF-4BEF-9853-25EF09952C5F} = {A0000006-0000-0000-0000-000000000006}
+		{911398AC-BFF0-4CF2-BD3C-27FFBF57DEFF} = {A0000006-0000-0000-0000-000000000006}
+		{D51959A9-1F65-4805-8FDD-D6E9F04F3C11} = {A0000006-0000-0000-0000-000000000006}
+		{3E6EBF4B-8F78-4D0B-8B16-E7560E1B8B0F} = {A0000006-0000-0000-0000-000000000006}
+		{23D93A78-7001-4FCD-BE6A-FBF47AAF3A4A} = {A0000006-0000-0000-0000-000000000006}
+		{094253FB-C11A-48EA-8406-D2D2629696C3} = {A0000006-0000-0000-0000-000000000006}
+		{3970CE9D-56F8-40A2-BEAB-09DBCDE0020D} = {A0000006-0000-0000-0000-000000000006}
+		; Proyectos dentro de test/PruebaUnitaria
+		{D92FE589-9F1C-47B5-82CF-2577BC779257} = {A0000008-0000-0000-0000-000000000008}
+		; Carpetas de solución anidadas dentro de src
+		{A0000003-0000-0000-0000-000000000003} = {A0000002-0000-0000-0000-000000000002}
+		{A0000004-0000-0000-0000-000000000004} = {A0000002-0000-0000-0000-000000000002}
+		{A0000005-0000-0000-0000-000000000005} = {A0000002-0000-0000-0000-000000000002}
+		{A0000006-0000-0000-0000-000000000006} = {A0000002-0000-0000-0000-000000000002}
+		; Carpetas de solución anidadas dentro de test
+		{A0000008-0000-0000-0000-000000000008} = {A0000007-0000-0000-0000-000000000007}
+		{A0000009-0000-0000-0000-000000000009} = {A0000007-0000-0000-0000-000000000007}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = preSolution
 		SolutionGuid = {EACE8E01-4DC6-43B1-98FE-402445A01AC3}
 	EndGlobalSection
 EndGlobal
