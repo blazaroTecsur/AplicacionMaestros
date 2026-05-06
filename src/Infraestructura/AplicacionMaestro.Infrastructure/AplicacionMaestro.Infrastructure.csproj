@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Dominio\AplicacionMaestro.Domain\AplicacionMaestro.Domain.csproj" />
-    <ProjectReference Include="..\..\..\Aplicacion\AplicacionMaestro.Application\AplicacionMaestro.Application.csproj" />
+    <ProjectReference Include="..\..\Dominio\AplicacionMaestro.Domain\AplicacionMaestro.Domain.csproj" />
+    <ProjectReference Include="..\..\Aplicacion\AplicacionMaestro.Application\AplicacionMaestro.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
