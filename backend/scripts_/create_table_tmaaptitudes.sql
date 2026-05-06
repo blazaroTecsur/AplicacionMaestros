@@ -1,0 +1,16 @@
+-- ── Tabla maestro de aptitudes ─────────────────────────────
+CREATE TABLE IF NOT EXISTS tmaaptitudes (
+    id_aptitud      BIGINT          NOT NULL AUTO_INCREMENT,
+    codigo          VARCHAR(20)     NOT NULL,
+    descripcion     VARCHAR(255)    NOT NULL,
+
+    usuario_reg     VARCHAR(100)    NULL,
+    fecha_reg       DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    usuario_act     VARCHAR(100)    NULL,
+    fecha_act       DATETIME        NULL ON UPDATE CURRENT_TIMESTAMP,
+
+    PRIMARY KEY (id_aptitud),
+
+    UNIQUE INDEX idx_tmaaptitudes_codigo (codigo),
+    INDEX        idx_tmaaptitudes_descripcion (descripcion(100))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
