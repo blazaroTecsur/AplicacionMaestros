@@ -1,7 +1,7 @@
 ﻿using Polly;
 using Polly.Retry;
 
-namespace AplicacionMaestro.Worker.Socios.Resilence
+namespace AplicacionMaestro.Worker.Empleados.Resilience
 {
     public static class RetryPolicies
     {
@@ -9,7 +9,7 @@ namespace AplicacionMaestro.Worker.Socios.Resilence
             ILogger logger)
         {
             return Policy
-                .Handle<Exception>()
+                .Handle<Exception>(ex => ex is not OperationCanceledException)
                 .WaitAndRetryAsync(
                     retryCount: 3,
                     sleepDurationProvider: retryAttempt =>

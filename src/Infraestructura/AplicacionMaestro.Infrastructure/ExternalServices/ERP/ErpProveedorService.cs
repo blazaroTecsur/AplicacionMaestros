@@ -1,5 +1,5 @@
 ﻿using AplicacionMaestro.Application;
-using AplicacionMaestro.Application.Features.Almacenes.Dtos;
+using AplicacionMaestro.Application.Features.Proveedores.Dtos;
 using System.Net.Http.Json;
 
 namespace AplicacionMaestro.Infrastructure;
@@ -22,9 +22,9 @@ public class ErpProveedorService : IErpProveedorService
 
         response.EnsureSuccessStatusCode();
 
-        var almacenes = await response.Content
+        var proveedores = await response.Content
             .ReadFromJsonAsync<List<ProveedorSyncDto>>(cancellationToken: cancellationToken);
 
-        return almacenes ?? new List<ProveedorSyncDto>();
+        return proveedores ?? new List<ProveedorSyncDto>();
     }
 }

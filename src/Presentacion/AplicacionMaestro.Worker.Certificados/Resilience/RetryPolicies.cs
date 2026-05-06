@@ -3,13 +3,13 @@ using Polly.Retry;
 
 namespace AplicacionMaestro.Worker.Certificados.Resilience
 {
-    public class RetryPolicies
+    public static class RetryPolicies
     {
         public static AsyncRetryPolicy CreateDefaultRetryPolicy(
             ILogger logger)
         {
             return Policy
-                .Handle<Exception>()
+                .Handle<Exception>(ex => ex is not OperationCanceledException)
                 .WaitAndRetryAsync(
                     retryCount: 3,
                     sleepDurationProvider: retryAttempt =>

@@ -9,7 +9,7 @@ public static class RetryPolicies
         ILogger logger)
     {
         return Policy
-            .Handle<Exception>()
+            .Handle<Exception>(ex => ex is not OperationCanceledException)
             .WaitAndRetryAsync(
                 retryCount: 3,
                 sleepDurationProvider: retryAttempt =>
