@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Aplicacion\AplicacionMaestro.Application\AplicacionMaestro.Application.csproj" />
+    <ProjectReference Include="..\..\Dominio\AplicacionMaestro.Domain\AplicacionMaestro.Domain.csproj" />
     <ProjectReference Include="..\..\Infraestructura\AplicacionMaestro.Infrastructure\AplicacionMaestro.Infrastructure.csproj" />
 
   </ItemGroup>
