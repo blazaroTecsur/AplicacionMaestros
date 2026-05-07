@@ -1,5 +1,4 @@
 ﻿using AplicacionMaestro.Application;
-using AplicacionMaestro.Application.Features.Aptitudes.Dtos;
 using System.Net.Http.Json;
 
 namespace AplicacionMaestro.Infrastructure;
@@ -14,7 +13,7 @@ public class LdsArticuloService : ILdsArticuloService
     public async Task<IReadOnlyCollection<ArticuloSyncDto>> ObtenerArticulosAsync(
     CancellationToken cancellationToken)
     {
-        await Task.Delay(150, cancellationToken);
+        // await Task.Delay(150, cancellationToken);
 
         var response = await _httpClient.GetAsync(
             "/api/lds/articulos",

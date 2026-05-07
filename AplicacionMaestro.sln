@@ -1,9 +1,19 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resource", "resource", "{A0000001-0000-0000-0000-000000000001}"
+	ProjectSection(SolutionItems) = preProject
+		backend\scripts_\create_table_tmaaptitud.sql = backend\scripts_\create_table_tmaaptitud.sql
+		backend\scripts_\create_table_tmaarticulo.sql = backend\scripts_\create_table_tmaarticulo.sql
+		backend\scripts_\create_table_tmacertificacion.sql = backend\scripts_\create_table_tmacertificacion.sql
+		backend\scripts_\create_table_tmacertificado.sql = backend\scripts_\create_table_tmacertificado.sql
+		backend\scripts_\create_table_tmaempleado.sql = backend\scripts_\create_table_tmaempleado.sql
+		backend\scripts_\create_table_tmaproveedor.sql = backend\scripts_\create_table_tmaproveedor.sql
+		backend\scripts_\create_table_tmasocio.sql = backend\scripts_\create_table_tmasocio.sql
+		backend\scripts_\create_table_tmasocioaptitud.sql = backend\scripts_\create_table_tmasocioaptitud.sql
+		backend\scripts_\create_table_tmasociocertificado.sql = backend\scripts_\create_table_tmasociocertificado.sql
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A0000002-0000-0000-0000-000000000002}"
 EndProject
@@ -153,18 +163,6 @@ Global
 		{D51959A9-1F65-4805-8FDD-D6E9F04F3C11}.Release|x64.Build.0 = Release|Any CPU
 		{D51959A9-1F65-4805-8FDD-D6E9F04F3C11}.Release|x86.ActiveCfg = Release|Any CPU
 		{D51959A9-1F65-4805-8FDD-D6E9F04F3C11}.Release|x86.Build.0 = Release|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|x64.Build.0 = Debug|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|x86.Build.0 = Debug|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|x64.ActiveCfg = Release|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|x64.Build.0 = Release|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|x86.ActiveCfg = Release|Any CPU
-		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|x86.Build.0 = Release|Any CPU
 		{3E6EBF4B-8F78-4D0B-8B16-E7560E1B8B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E6EBF4B-8F78-4D0B-8B16-E7560E1B8B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E6EBF4B-8F78-4D0B-8B16-E7560E1B8B0F}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -213,18 +211,32 @@ Global
 		{3970CE9D-56F8-40A2-BEAB-09DBCDE0020D}.Release|x64.Build.0 = Release|Any CPU
 		{3970CE9D-56F8-40A2-BEAB-09DBCDE0020D}.Release|x86.ActiveCfg = Release|Any CPU
 		{3970CE9D-56F8-40A2-BEAB-09DBCDE0020D}.Release|x86.Build.0 = Release|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|x64.Build.0 = Debug|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Debug|x86.Build.0 = Debug|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|x64.ActiveCfg = Release|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|x64.Build.0 = Release|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|x86.ActiveCfg = Release|Any CPU
+		{D92FE589-9F1C-47B5-82CF-2577BC779257}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		; Proyectos dentro de src/Aplicacion
+		{A0000003-0000-0000-0000-000000000003} = {A0000002-0000-0000-0000-000000000002}
+		{A0000004-0000-0000-0000-000000000004} = {A0000002-0000-0000-0000-000000000002}
+		{A0000005-0000-0000-0000-000000000005} = {A0000002-0000-0000-0000-000000000002}
+		{A0000006-0000-0000-0000-000000000006} = {A0000002-0000-0000-0000-000000000002}
+		{A0000008-0000-0000-0000-000000000008} = {A0000007-0000-0000-0000-000000000007}
+		{A0000009-0000-0000-0000-000000000009} = {A0000007-0000-0000-0000-000000000007}
 		{22D1DE6D-0CC1-4A37-A79A-B3DCE3AC997D} = {A0000003-0000-0000-0000-000000000003}
-		; Proyectos dentro de src/Dominio
 		{DA309A94-0E51-4410-B1A7-228A4111155A} = {A0000004-0000-0000-0000-000000000004}
-		; Proyectos dentro de src/Infraestructura
 		{C113F53B-DAA3-4CA8-91D4-9C77C90194E7} = {A0000005-0000-0000-0000-000000000005}
-		; Proyectos dentro de src/Presentacion
 		{15F0DD14-2F07-4ECF-9F48-F28BE715FA9D} = {A0000006-0000-0000-0000-000000000006}
 		{5792952A-4105-4487-9CC3-F08D58407937} = {A0000006-0000-0000-0000-000000000006}
 		{20C8D0D0-82FF-4BEF-9853-25EF09952C5F} = {A0000006-0000-0000-0000-000000000006}
@@ -234,18 +246,9 @@ Global
 		{23D93A78-7001-4FCD-BE6A-FBF47AAF3A4A} = {A0000006-0000-0000-0000-000000000006}
 		{094253FB-C11A-48EA-8406-D2D2629696C3} = {A0000006-0000-0000-0000-000000000006}
 		{3970CE9D-56F8-40A2-BEAB-09DBCDE0020D} = {A0000006-0000-0000-0000-000000000006}
-		; Proyectos dentro de test/PruebaUnitaria
 		{D92FE589-9F1C-47B5-82CF-2577BC779257} = {A0000008-0000-0000-0000-000000000008}
-		; Carpetas de solución anidadas dentro de src
-		{A0000003-0000-0000-0000-000000000003} = {A0000002-0000-0000-0000-000000000002}
-		{A0000004-0000-0000-0000-000000000004} = {A0000002-0000-0000-0000-000000000002}
-		{A0000005-0000-0000-0000-000000000005} = {A0000002-0000-0000-0000-000000000002}
-		{A0000006-0000-0000-0000-000000000006} = {A0000002-0000-0000-0000-000000000002}
-		; Carpetas de solución anidadas dentro de test
-		{A0000008-0000-0000-0000-000000000008} = {A0000007-0000-0000-0000-000000000007}
-		{A0000009-0000-0000-0000-000000000009} = {A0000007-0000-0000-0000-000000000007}
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = preSolution
+	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EACE8E01-4DC6-43B1-98FE-402445A01AC3}
 	EndGlobalSection
 EndGlobal
