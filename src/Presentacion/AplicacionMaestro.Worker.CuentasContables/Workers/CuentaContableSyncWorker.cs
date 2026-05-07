@@ -2,7 +2,7 @@
 using AplicacionMaestro.Application.ExternalServices.LDS;
 using AplicacionMaestro.Application.Features.CtasContables.Commands;
 using AplicacionMaestro.Domain.Exceptions;
-using AplicacionMaestro.Worker.Socios.Resilence;
+using AplicacionMaestro.Worker.CuentasContables.Resilience;
 using MediatR;
 using Microsoft.Extensions.Options;
 using Polly;
