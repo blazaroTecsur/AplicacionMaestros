@@ -21,9 +21,9 @@ public class ErpProveedorService : IErpProveedorService
 
         response.EnsureSuccessStatusCode();
 
-        var almacenes = await response.Content
+        var proveedores = await response.Content
             .ReadFromJsonAsync<List<ProveedorSyncDto>>(cancellationToken: cancellationToken);
 
-        return almacenes ?? new List<ProveedorSyncDto>();
+        return proveedores ?? new List<ProveedorSyncDto>();
     }
 }

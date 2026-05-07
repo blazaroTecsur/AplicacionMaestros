@@ -7,6 +7,11 @@ namespace AplicacionMaestro.Infrastructure.ExternalServices.ERP
 {
     public class ErpAptitudService : IErpAptitudService
     {
+        private static readonly JsonSerializerOptions JsonOptions = new()
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
         private readonly HttpClient _httpClient;
 
         public ErpAptitudService(HttpClient httpClient)
@@ -17,20 +22,14 @@ namespace AplicacionMaestro.Infrastructure.ExternalServices.ERP
         public async Task<IReadOnlyCollection<AptitudSyncDto>> ObtenerAptitudesAsync(
             CancellationToken cancellationToken)
         {
-            // Endpoint de ejemplo
             var response = await _httpClient.GetAsync(
                 "/api/erp/aptitudes",
                 cancellationToken);
 
             response.EnsureSuccessStatusCode();
 
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
-
             var aptitudes = await response.Content
-                .ReadFromJsonAsync<List<AptitudSyncDto>>(options, cancellationToken: cancellationToken);
+                .ReadFromJsonAsync<List<AptitudSyncDto>>(JsonOptions, cancellationToken: cancellationToken);
 
             return aptitudes ?? new List<AptitudSyncDto>();
         }

@@ -9,7 +9,7 @@ namespace AplicacionMaestro.Worker.Articulos.Resilence
             ILogger logger)
         {
             return Policy
-                .Handle<Exception>()
+                .Handle<Exception>(ex => ex is not OperationCanceledException)
                 .WaitAndRetryAsync(
                     retryCount: 3,
                     sleepDurationProvider: retryAttempt =>
